@@ -18,14 +18,12 @@ submitBtn.addEventListener("click",(e)=>{
 	let pass=password.value;  
 	
 	alert(`Logged in as ${username}`);
-	if(checkbox.checked){
+	if (checkbox.checked) {
 		localStorage.setItem("user", JSON.stringify({
-	    username: username,
-	    password: pass
-}));
-	}
-	else {
-		localStorage.removeItem("user");
-	    existingBtn.style.display = "none";
+	    username: username
+  }));
+	} else {
+		  localStorage.removeItem("user");
+		  existingBtn.style.display = "none";
 	}
 })
