@@ -22,6 +22,6 @@ submitBtn.addEventListener("click",(e)=>{
 		localStorage.setItem("user",JSON.stringify({username,pass}));
 	}
 	else if(!checkbox.checked){
-		localStorage.clear();
+		localStorage.removeItem("user");
 	}
 })
