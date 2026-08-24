@@ -15,13 +15,16 @@ existingBtn.addEventListener("click",()=>{
 submitBtn.addEventListener("click",(e)=>{
 	e.preventDefault();
 	let username=name.value;
-	let pass=password.value;
+	let pass=password.value; 
 	
 	alert(`Logged in as ${username}`);
 	if(checkbox.checked){
 		localStorage.setItem("user",JSON.stringify({username,pass}));
 	}
 	else{
-		localStorage.clear();
+		if(localStorage.getItem("user")!==null){
+			localStorage.removeItem("user");	
+		}
+		
 	}
 })
