@@ -19,7 +19,10 @@ submitBtn.addEventListener("click",(e)=>{
 	
 	alert(`Logged in as ${username}`);
 	if(checkbox.checked){
-		localStorage.setItem("user",JSON.stringify({username,pass}));
+		localStorage.setItem("user", JSON.stringify({
+	    username: username,
+	    password: pass
+}));
 	}
 	else {
 		localStorage.removeItem("user");
